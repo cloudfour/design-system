@@ -1,5 +1,6 @@
 import React, { ComponentProps, FC, ReactNode } from 'react';
 import { styled } from '@storybook/theming';
+import { Button } from './Button';
 
 import { breakpoint, spacing, typography } from './shared/styles';
 
@@ -62,7 +63,6 @@ interface Props {
 }
 
 export const ShadowBoxCTA: FC<Props & ComponentProps<typeof ShadowBoxCTAWrapper>> = ({
-  action,
   headingText,
   messageText,
   ...rest
@@ -73,6 +73,8 @@ export const ShadowBoxCTA: FC<Props & ComponentProps<typeof ShadowBoxCTAWrapper>
       {messageText && <MessageText>{messageText}</MessageText>}
     </TextWrapper>
 
-    <Action>{action}</Action>
+    <Action>
+      <Button appearance="secondary">Continue</Button>
+    </Action>
   </ShadowBoxCTAWrapper>
 );
