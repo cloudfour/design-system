@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 // @ts-ignore
 import seedrandom from 'seedrandom';
@@ -12,12 +13,20 @@ export default {
   title: 'Tag/TagLink',
 };
 
-export const Default = () => <TagLink href="https://chromatic.com">⚛️ React</TagLink>;
+export const Default = (args) => <TagLink href="https://chromatic.com">{args.children}</TagLink>;
 
-export const WithLinkWrapper = () => (
+export const WithLinkWrapper = (args) => (
   <TagLink to="https://chromatic.com" LinkWrapper={StoryLinkWrapper as React.FC<{ to: string }>}>
-    ⚛️ React
+    {args.children}
   </TagLink>
 );
+
+Default.args = {
+  children: '⚛️ React',
+};
+
+WithLinkWrapper.args = {
+  children: '⚛️ React',
+};
 
 export const Loading = () => <TagLink isLoading />;
