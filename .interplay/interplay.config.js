@@ -13,13 +13,13 @@ module.exports = () => {
     //TOKENS SETTINGS
 
     //Specify JSON files to parse for design tokens
-    //designTokens: [
-    //    {
-    //      paths: [],              //glob path for JSON files containing design tokens
-    //      format: "w3c@0.1",      //format of your tokens JSON
-    //      name: "Default",        //name of this theme
-    //    }
-    //],
+    designTokens: [
+      {
+        paths: ['./src/tokens/tokens.json'], //glob path for JSON files containing design tokens
+        format: 'w3c@0.1', //format of your tokens JSON
+        name: 'Default', //name of this theme
+      },
+    ],
 
     //////////////////////////////////////////////////////////////////////////////////////////////////
     //COMPONENTS SETTINGS

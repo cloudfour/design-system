@@ -1,3 +1,11 @@
 {
-  "deepscan.enable": true
+  "deepscan.enable": true,
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#ff7aa7",
+    "titleBar.activeBackground": "#ff4785",
+    "titleBar.activeForeground": "#000000cc",
+    "titleBar.inactiveBackground": "#ff478599",
+    "titleBar.inactiveForeground": "#00000099"
+  },
+  "peacock.color": "#FF4785"
 }
